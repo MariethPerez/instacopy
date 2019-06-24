@@ -9,6 +9,10 @@ class User < ApplicationRecord
   has_many :followers, through: :follower_relations, source: :follower
   has_many :posts
 
+  # def full_name
+  #   "#{first_name} #{last_name}"
+  # end
+
   def follow(other_user)
     following << other_user
   end
